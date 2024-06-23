@@ -61,8 +61,3 @@ The Personal Management System follows a client-server architecture:
   - (Potentially) Nutrition API for calorie tracking
   - (Potentially) Finance API for expense categorization
 
-## Demo Video
-
-https://github.com/Nuna7/Personal-Management-System/assets/75081940/8b4c2218-1250-4c55-9463-067846ae3aee
-
-Click the link above to watch a demonstration of the Personal Management System in action.
