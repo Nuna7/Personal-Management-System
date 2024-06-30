@@ -1,0 +1,12 @@
+.Bar{
+    max-width: 48%;
+    height: 50%;
+}
+
+@media (max-width: 768px){
+    .Bar{
+        max-width: 100%;
+        height: 500px;
+    }
+}
+

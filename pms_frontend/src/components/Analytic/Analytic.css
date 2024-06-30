@@ -1,0 +1,32 @@
+.analytics-container {
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 0;
+  }
+  
+  .analytics-container h1 {
+    text-align: center;
+    color: #00838f;
+    margin-bottom: 30px;
+    margin-right: 15%;
+  }
+  
+  .analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .analytics-item {
+    transition: transform 0.3s ease;
+  }
+  
+  .analytics-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  @media (max-width: 768px) {
+    .analytics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
