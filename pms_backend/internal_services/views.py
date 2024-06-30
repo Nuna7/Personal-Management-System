@@ -120,7 +120,7 @@ class GoalView(generics.CreateAPIView):
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-
+        print(request.data)
         if serializer.is_valid():
             goal = serializer.save()
             GoalUser.objects.create(user_id=request.user, goal_id=goal)
@@ -299,7 +299,7 @@ class AnalyticsView(APIView):
         expense_per_month = Expense.objects.filter(
             expenseuser__user_id=current_user,
             date__year=current_year
-        ).values('date__month').annotate(total=Sum('amount')).order_by('date__month')
+        ).values('date__month').annotate(total=Sum('amount'))
 
         # Expense per category (all time)
         expense_per_category = Expense.objects.filter(

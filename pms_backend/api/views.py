@@ -6,6 +6,9 @@ from rest_framework.permissions import AllowAny
 from .serializers import UserSerializer, LoginSerializer
 from .models import User
 from rest_framework_simplejwt.tokens import RefreshToken
+import logging
+
+logger = logging.getLogger(__name__)
 
 class UserCreateView(generics.CreateAPIView):
     """
@@ -15,6 +18,7 @@ class UserCreateView(generics.CreateAPIView):
     permission_classes = [AllowAny]
 
     def create(self, request, *args, **kwargs):
+        logger.info(f"Received signup request: {request.data}")
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
             username = request.data.get('username')

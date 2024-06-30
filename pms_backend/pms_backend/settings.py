@@ -21,6 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -44,11 +46,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    'corsheaders',
     'api',
     'external_services',
     'internal_services',
-    'django_celery_beat',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -71,10 +72,9 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
-    ]
+    ],
 }
 
-# New access token every 30 minutes using the same refresh token for 1 day
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
@@ -82,26 +82,10 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'http://accounts.google.com'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
-    'http://accounts.google.com'
-]
-
-ALLOWED_HOSTS = ['localhost']
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
-
-
-CORS_ALLOW_METHODS = [
-    'GET',
-    'POST',
-    'PUT',
-    'PATCH',
-    'DELETE',
-    'OPTIONS'
 ]
 
 CORS_ALLOW_CREDENTIALS = True

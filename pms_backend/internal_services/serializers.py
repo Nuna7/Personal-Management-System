@@ -54,6 +54,12 @@ class Productivity(serializers.ModelSerializer):
         productivity = ProductivityMode.objects.create(**data)
         return productivity
 
+    def update(self, instance, validated_data):
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
+        instance.save()
+        return instance
+
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
@@ -62,6 +68,12 @@ class TaskSerializer(serializers.ModelSerializer):
     def create(self, data):
         task = Task.objects.create(**data)
         return task
+
+    def update(self, instance, validated_data):
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
+        instance.save()
+        return instance
 
 
 
