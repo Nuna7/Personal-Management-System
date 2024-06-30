@@ -13,17 +13,18 @@
 .form-group input {
   width: 100%;  
   padding: 4px;  
-  border: 1px solid #bdc3c7;
+  border: 1px solid #eff2f4;
   border-radius: 4px;
   font-size: 16px;
 }
 
-.form-group label {
+.form-group > .label {
   display: block;
   margin-bottom: 5px;
-  color: #34495e;
+  color: #03070c;
   font-size: 16px;  
 }
+
   
   button {
     background-color: #3498db;
@@ -42,3 +43,4 @@
     color: #e74c3c;
     margin-bottom: 10px;
   }
+

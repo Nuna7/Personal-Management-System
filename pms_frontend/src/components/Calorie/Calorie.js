@@ -82,7 +82,7 @@ const Calorie = () => {
                     />
                 </div>
                 <div className="form-group">
-                    <OptionInput id="meal_type" name="meal_type" label="Meal Type:" options={options}
+                    <OptionInput className="inputText" id="meal_type" name="meal_type" label="Meal Type:" options={options}
                         value={calorieConfig.meal_type} onChange={handleChange}/>
                 </div>
                 <button type="submit" className="btn-submit">Submit</button>
