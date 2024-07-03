@@ -155,14 +155,7 @@ cd frontend
 npm install
 ```
 
-2. Configure API Endpoint
-- In the frontend directory, create or edit the `.env` file
-- Add the following line:
-  ```
-  REACT_APP_API_URL=http://localhost:8000/api
-  ```
-
-3. Start the Frontend Development Server
+2. Start the Frontend Development Server
 ```
 npm start
 ```
