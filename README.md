@@ -166,3 +166,7 @@ Open your web browser and navigate to `http://localhost:3000` to access the Pers
 ## Troubleshooting
 - If you encounter any database connection issues, double-check your PostgreSQL installation and the database configuration in `settings.py`.
 - For any dependency-related issues, ensure you're using compatible versions of Python and Node.js as specified in the prerequisites.
+
+## Watch Video
+- In order to watch the screencast : ![Watch the video](https://github.com/Nuna7/Personal-Management-System/tree/main/docs_phase3/PMS%20Screencast.mp4)
+
