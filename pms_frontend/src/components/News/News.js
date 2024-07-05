@@ -7,6 +7,7 @@ import getCsrfToken from '../../utility/getCsrfToken';
 
 import { NEWS_SOURCES, NEWS } from '../../utility/constants';
 import NewsArticle from './NewsArticle';
+import styles from '../UI/optionInputWhite.module.css'
 
 const News = () => {
     const [topHeadlines, setTopHeadlines] = useState({
@@ -107,9 +108,9 @@ const News = () => {
                     <h2>Top Headlines</h2>
                     <form onSubmit={handleTopHeadlinesSubmit}>
                         <TextInput id="keyword1" name="keywords" label="Keywords:" placeholder="Enter Keyword or Keyphrase" value={topHeadlines.keywords} onChange={handleTopHeadlinesChange} />
-                        <OptionInput id="country1" name="country" label="Country:" placeholder="Country" options={options.countryOptions} value={topHeadlines.country} onChange={handleTopHeadlinesChange} />
-                        <OptionInput id="category1" name="category" label="Category:" options={options.categoryOptions} value={topHeadlines.category} onChange={handleTopHeadlinesChange} />
-                        <OptionInput id="language1" name="language" label="Language:" options={options.languageOptions} value={topHeadlines.language} onChange={handleTopHeadlinesChange} />
+                        <OptionInput id="country1" name="country" label="Country:" placeholder="Country" options={options.countryOptions} value={topHeadlines.country} onChange={handleTopHeadlinesChange} styles={styles} />
+                        <OptionInput id="category1" name="category" label="Category:" options={options.categoryOptions} value={topHeadlines.category} onChange={handleTopHeadlinesChange} styles={styles} />
+                        <OptionInput id="language1" name="language" label="Language:" options={options.languageOptions} value={topHeadlines.language} onChange={handleTopHeadlinesChange} styles={styles} />
                         <button type="submit">Search</button>
                     </form>
                 </div>
@@ -118,9 +119,9 @@ const News = () => {
                     <h2>All Articles</h2>
                     <form onSubmit={handleAllArticlesSubmit}>
                         <TextInput id="keyword2" name="keywords" label="Keywords:" placeholder="Enter Keyword or Keyphrase" value={allArticles.keywords} onChange={handleAllArticlesChange} />
-                        <OptionInput id="sources2" name="sources" label="Sources:" options={options.sourceOptions} value={allArticles.sources} onChange={handleAllArticlesChange} />
-                        <OptionInput id="language2" name="language" label="Language:" options={options.languageOptions} value={allArticles.language} onChange={handleAllArticlesChange} />
-                        <OptionInput id="sortBy" name="sort_by" label="Sort By:" options={options.sortByOptions} value={allArticles.sort_by} onChange={handleAllArticlesChange} />
+                        <OptionInput id="sources2" name="sources" label="Sources:" options={options.sourceOptions} value={allArticles.sources} onChange={handleAllArticlesChange} styles={styles} />
+                        <OptionInput id="language2" name="language" label="Language:" options={options.languageOptions} value={allArticles.language} onChange={handleAllArticlesChange} styles={styles} />
+                        <OptionInput id="sortBy" name="sort_by" label="Sort By:" options={options.sortByOptions} value={allArticles.sort_by} onChange={handleAllArticlesChange} styles={styles} />
                         <div className="date-range">
                             <div className="date-group">
                                 <label htmlFor="fromDate">From Date:</label>

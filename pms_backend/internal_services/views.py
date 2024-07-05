@@ -342,6 +342,8 @@ class AnalyticsView(APIView):
             ]
         }
 
+        print()
+
         return Response(data, status=status.HTTP_200_OK)
 
 class TaskAnalyticsView(APIView):

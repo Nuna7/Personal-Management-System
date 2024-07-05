@@ -4,9 +4,14 @@
     padding: 20px;
 }
 
-.productivity-container .form-group {
+.productivity-container .productivity-form-group {
     width: 95%;
 }
+
+.form-group .label{
+    color: white !important;
+}
+
 
 
 @media (max-width: 768px) {

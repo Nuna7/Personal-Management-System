@@ -98,6 +98,8 @@ button:hover {
 .item-block p {
     margin: 5px 0;
 }
+
+
 @media (max-width: 768px) {
     .goal-container {
         flex-direction: column;

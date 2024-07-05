@@ -6,6 +6,7 @@ import handleSubmit from "../../utility/handleSubmit";
 import OptionInput from "../UI/optionInput";
 import TextInput from "../UI/textInput";
 import './Calorie.css';
+import styles from '../UI/optionInput.module.css'
 
 const Calorie = () => {
     const initialCalorieConfig = { 
@@ -83,7 +84,7 @@ const Calorie = () => {
                 </div>
                 <div className="form-group">
                     <OptionInput className="inputText" id="meal_type" name="meal_type" label="Meal Type:" options={options}
-                        value={calorieConfig.meal_type} onChange={handleChange}/>
+                        value={calorieConfig.meal_type} onChange={handleChange} styles={styles}/>
                 </div>
                 <button type="submit" className="btn-submit">Submit</button>
             </form>

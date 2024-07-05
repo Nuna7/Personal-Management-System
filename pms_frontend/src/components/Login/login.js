@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import { LOGIN_URL } from "../../utility/constants";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../utility/constants";
-import authApi from "../../api/authApi";
+import publicApi from "../../api/publicApi";
 import "./login.css"
 
 const Login = () => {
@@ -16,7 +16,7 @@ const Login = () => {
 
         try {
 
-            const res = await authApi.post(LOGIN_URL, { username, password });
+            const res = await publicApi.post(LOGIN_URL, { username, password });
 
             if (res.data.access && res.data.refresh) {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
@@ -26,17 +26,8 @@ const Login = () => {
                 console.error("Tokens are missing in the response");
             }
         } catch (error) {
-            console.error("Login error:", error);
-            if (error.response) {
-                console.error("Error response:", error.response);
-                setError(JSON.stringify(error.response.data));
-            } else if (error.request) {
-                console.error("Error request:", error.request);
-                setError("No response received from server");
-            } else {
-                console.error("Error message:", error.message);
-                setError("Unable to login, please try again.");
-            }
+            
+            setError("Unable to login, please try again.")
         }
     };
 

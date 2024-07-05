@@ -8,6 +8,7 @@ import handleEdit from '../../utility/handleEdit';
 import handleUnedit from '../../utility/handleUnedit';
 import './Productivity.css'
 import handleSubmit from '../../utility/handleSubmit';
+import styles from '../UI/optionInputWhite.module.css'
 
 const ProductivityMode = () => {
 
@@ -102,17 +103,17 @@ const ProductivityMode = () => {
             <div className='form-section'>
                 <form onSubmit={handleSubmitProd}>
                     <h2>Productivity Mode</h2>
-                    <div className="form-group">
+                    <div className="productivity-form-group">
 
                         <label>Start Time:</label>
                         <input type="time" name="start_time" value={productivityConfig.start_time} onChange={handleChange} />
                     </div>
-                    <div className="form-group">
+                    <div className="productivity-form-group">
                         <label>End Time:</label>
                         <input type="time" name="end_time" value={productivityConfig.end_time} onChange={handleChange} />
                     </div>
                     <OptionInput id="selected_day" name="selected_day" label="Select Day of the Week:" options={options}
-                        value={productivityConfig.selected_day} onChange={handleChange}/>
+                        value={productivityConfig.selected_day} onChange={handleChange} styles={styles}/>
                     <button type="submit">Submit</button>
                 </form>
             </div>

@@ -28,6 +28,14 @@ form > div {
     margin-bottom: 15px;
 }
 
+.form-group > .label{
+    color: rgb(244, 240, 240);
+}
+
+.label{
+    color: white;
+}
+
 input[type="text"],
 input[type="date"],
 select {
@@ -107,6 +115,7 @@ button:hover {
     color: white !important;
     text-align: center;
 }
+
 
 @media (max-width:900px) {
     .news-search-forms-container{

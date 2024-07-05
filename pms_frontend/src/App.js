@@ -20,11 +20,11 @@ function App() {
         <Route path='/signup' element={<Signup /> } />
         <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
           <Route index element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path="/analytic" element={<ProtectedRoute><Analytic/> </ProtectedRoute>}/>
           <Route path="/task" element={<ProtectedRoute><Task /></ProtectedRoute>} />
           <Route path="/news" element={<ProtectedRoute><News /></ProtectedRoute>} />
           <Route path="/productivity" element={<ProtectedRoute><ProductivityMode /></ProtectedRoute>} />
           <Route path="/goal" element={<ProtectedRoute><Goal /></ProtectedRoute>} />
-          <Route path="/analytic" element={<ProtectedRoute><Analytic/> </ProtectedRoute>}/>
         </Route>
     </Routes>
     </BrowserRouter>
